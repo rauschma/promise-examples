@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Debugging Promises in Chrome</title>
+</head>
+<body>
+    <script>
+        // Unhandled rejection
+        Promise.reject(new Error())
+        .then(function (x) { return 'a'})
+        .then(function (x) { return 'b'})
+
+        // Unsettled Promise
+        new Promise(function () {});
+    </script>
+</body>
+</html>
